@@ -7,6 +7,11 @@ export interface BackgroundFetchConfig {
    * Set true to cease background-fetch from operating after user "closes" the app. Defaults to true.
    */
   stopOnTerminate?: boolean;
+  
+  /**
+   * Set custome interval in minutes (Android Only)
+   */
+  interval?: number;
 }
 
 
@@ -56,8 +61,8 @@ export interface BackgroundFetchConfig {
   pluginName: 'BackgroundFetch',
   plugin: 'cordova-plugin-background-fetch',
   pluginRef: 'BackgroundFetch',
-  repo: 'https://github.com/transistorsoft/cordova-plugin-background-fetch',
-  platforms: ['iOS']
+  repo: 'https://github.com/pieero/cordova-plugin-background-fetch',
+  platforms: ['Android', 'iOS']
 })
 @Injectable()
 export class BackgroundFetch extends IonicNativePlugin {
